@@ -1,0 +1,170 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ##############################
+Header
+################################ */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    padding: 10px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.toggle-item i {
+    color: rgb(5, 97, 86);
+    font-size: 40px;
+    display: none;
+}
+
+.nav {
+    margin-top: 15px;
+}
+
+.nav-item {
+    position: relative;
+    float: left;
+    padding: 10px;
+}
+
+.nav-item a {
+    padding-left: 20px;
+    color: rgb(5, 97, 86);
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.subnav-items {
+    position: absolute;
+    left: 10px;
+    top: 40px;
+    padding-top: 5px;
+    width: 180px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 7px 10px rgba(0,0,0,.1);
+    border-radius: 0 0 8px 8px;
+    border-top: 5px solid rgb(5, 97, 86);
+    display: none;
+    z-index: 1;
+}
+
+.subnav-item {
+    padding: 7px 0;
+    width: 100%;
+}
+
+
+.nav-item:hover > .subnav-items,
+.nav-item:focus > .subnav-items {
+    display: initial;
+}
+
+/* ##############################
+Main
+################################ */
+
+.hero-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* ##############################
+Footer
+################################ */
+
+footer {
+    position: relative;
+    bottom: 0;
+}
+
+
+
+@media (max-width: 60rem) {
+    
+    .header{
+        padding: 20px;
+    }
+
+    .toggle-item i {
+        display: initial;
+    }
+
+    .nav {
+        margin-top: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: 5px solid rgba(5, 97, 86, 0.648);
+        display: none;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin-left: -5px;
+    }
+
+    .subnav-items {
+        position: relative;
+        width: 100%;
+        left: 10px;
+        top: 15px;
+    }
+
+    .subnav-item a {
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
